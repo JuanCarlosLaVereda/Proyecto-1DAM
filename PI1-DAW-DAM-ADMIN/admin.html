@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MiraVereda Admin</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div id="menu_responsive">
+      <nav>
+          <ul>
+            <li class="itemder">
+              <a href="#">⁝</a>
+              <ul class="submenu">
+                <li><a id="cerrarSesion" onclick="cerrarSesion()">Cerrar Sesión</a></li>
+              </ul>
+            </li>
+          </ul>
+      </nav>
+    </div>
+    <div id="contenido-logo">
+      <img class="logocircular" id="normal" src="img/DALL·E 2024-05-15 17.12.06 - Design a logo featuring an antique film camera with the initials 'MV' incorporated into the camera lens. The camera should be centrally placed within .webp" width="100px" height="auto">
+      <h1>MiraVereda Admin</h1>
+      <img class="logocircular" id="responsive" src="img/DALL·E 2024-05-15 17.12.06 - Design a logo featuring an antique film camera with the initials 'MV' incorporated into the camera lens. The camera should be centrally placed within .webp" width="100px" height="auto">
+    </div>
+    <div id="contenido-usuario">
+      <img id="iconoUsuario" class="logocircular" src="https://static.vecteezy.com/system/resources/previews/019/879/186/non_2x/user-icon-on-transparent-background-free-png.png" width="100px" height="auto">
+      <a id="cerrarSesion" class="button" onclick="cerrarSesion()">Cerrar Sesión</a>
+    </div>
+  </header>
+<div class="admin-container">
+  <h1>Panel de Administración</h1>
+  <nav class="nav">
+    <button class="tablink" onclick="openTab(event, 'Contenido')">Contenido</button>
+    <button class="tablink" onclick="openTab(event, 'Clients')">Clientes</button>
+  </nav>
+
+  <div id="Contenido" class="tabcontent hidden">
+    <h2>Contenido</h2>
+    <div class="buttonCrud">
+      <button onclick="showAddContentForm()">Añadir Contenido</button>
+      <a href="formContenido.html" class="button">Modificar Contenido</a>
+      <a href="formContenido.html" class="button">Eliminar Contenido</a>
+    </div>
+    <div class="buttonCrud" id="selectContentType" style="display: none;">
+      <button onclick="showAddPeliculaForm()">Añadir Pelicula</button>
+      <button onclick="showAddCortoForm()">Añadir Corto</button>
+      <button onclick="showAddCapituloForm()">Añadir Capitulo</button>
+      <button onclick="showAddSerieForm()">Añadir Serie</button>
+    </div>
+
+    <form id="peliculaForm" style="display:none;" onsubmit="addPelicula(); return false;">
+      <input type="text" id="peliculaTitle" name="peliculaTitle" placeholder="Título" required>
+      <input type="text" id="peliculaDescription" name="peliculaDescription" placeholder="Descripción" required>
+      <input type="text" id="peliculaDirector" name="peliculaDirector" placeholder="Director" required>
+      <input type="number" id="peliculaGenre" name="peliculaGenre" placeholder="Id Género" required>
+      <input type="number" id="peliculaRate" name="peliculaRate" placeholder="Id Tarifa" required>
+      <input type="url" id="peliculaImageUrl" name="peliculaImageUrl" placeholder="URL Imagen" required>
+      <input type="date" id="peliculaDisponible" name="peliculaDisponible" placeholder="Disponibilidad" required>
+      <button type="submit">Guardar Pelicula</button>
+    </form>
+
+    <form id="cortoForm" style="display:none;" onsubmit="addCorto(); return false;">
+      <input type="text" id="cortoTitle" name="cortoTitle" placeholder="Título" required>
+      <input type="text" id="cortoDescription" name="cortoDescription" placeholder="Descripción" required>
+      <input type="text" id="cortoDirector" name="cortoDirector" placeholder="Director" required>
+      <input type="number" id="cortoGenre" name="cortoGenre" placeholder="Id Género" required>
+      <input type="number" id="cortoRate" name="cortoRate" placeholder="Id Tarifa" required>
+      <input type="url" id="cortoImageUrl" name="cortoImageUrl" placeholder="URL Imagen" required>
+      <button type="submit">Guardar Corto</button>
+    </form>
+
+    <form id="capituloForm" style="display:none;" onsubmit="addCapitulo(); return false;">
+      <input type="text" id="capituloTitle" name="capituloTitle" placeholder="Título" required>
+      <input type="text" id="capituloDescription" name="capituloDescription" placeholder="Descripción" required>
+      <input type="text" id="capituloDirector" name="capituloDirector" placeholder="Director" required>
+      <input type="number" id="capituloGenre" name="capituloGenre" placeholder="Id Género" required>
+      <input type="number" id="capituloRate" name="capituloRate" placeholder="Id Tarifa" required>
+      <input type="url" id="capituloImageUrl" name="capituloImageUrl" placeholder="URL Imagen" required>
+      <input type="number" id="capituloTemporada" name="capituloTemporada" placeholder="Temporada" required>
+      <input type="number" id="capituloSerie" name="capituloSerie" placeholder="Id Serie" required>
+      <button type="submit">Guardar Capitulo</button>
+    </form>
+
+    <form id="serieForm" style="display:none;" onsubmit="addSerie(); return false;">
+      <input type="text" id="serieTitle" name="serieTitle" placeholder="Título" required>
+      <input type="text" id="serieDescription" name="serieDescription" placeholder="Descripción" required>
+      <input type="url" id="serieImageUrl" name="serieImageUrl" placeholder="URL Imagen" required>
+      <input type="date" id="serieDisponible" name="serieDisponible" placeholder="Disponibilidad" required>
+      <button type="submit">Guardar Serie</button>
+    </form>
+  </div>
+
+  <div id="Clients" class="tabcontent hidden">
+    <h2>Clientes</h2>
+    <div class="buttonCrud">
+      <button onclick="showAddClientForm()">Añadir Cliente</button>
+      <a href="formCliente.html" class="button">Modificar Cliente</a>
+      <a href="formCliente.html" class="button">Eliminar Cliente</a>
+    </div>
+    <form id="clientForm" style="display:none;" onsubmit="addClient(); return false;">
+      <input type="text" id="clientUser" name="clientUser" placeholder="Usuario" required>
+      <input type="text" id="clientName" name="clientName" placeholder="Nombre" required>
+      <input type="text" id="clientLastName" name="clientLastName" placeholder="Apellido" required>
+      <input type="password" id="clientPassword" name="clientPassword" placeholder="Contraseña" required>
+      <input type="text" id="clientEmail" name="clientEmail" placeholder="Email" required>
+      <button type="submit">Guardar Cliente</button>
+    </form>
+
+  </div>
+  <h1 id="mensaje_resultado"></h1>
+</div>
+<script src="js/app.js"></script>
+<footer>
+  <p>1ºDAW</p>
+  <p>1ºDAM</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,614 @@
+/* Estilos Generales */
+body, html {
+  margin: auto;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #e8eaf6;
+  color: #273c75;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+h1, h2 {
+  color: #192a56;
+  text-align: center;
+}
+
+header {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3px;
+  padding: 6px;
+  min-width: 70vw;
+  max-width: 70vw;
+ margin: auto 15vw;
+}
+
+footer {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  display: flex;
+  justify-content: center;
+  padding: 6px;
+ /* min-width: 100vw;*/
+ max-width: 70vw;
+ margin: auto 15vw;
+}
+
+footer p{
+  margin-left: 1%;
+  color: gray;
+}
+
+.logocircular {
+  border-radius: 100%;
+}
+
+#spinner {
+  display: none;
+}
+
+#responsive {
+  display: none;
+}
+
+#menu_responsive {
+
+  position: absolute;
+  display: none;
+  justify-content: flex-end;
+  align-content: flex-end;
+  color: #273c75;
+  top: 0;
+
+}
+
+
+#menu_responsive .itemder {
+
+  margin-left: 0;
+  margin-right: auto;
+  margin-top: 6%;
+  font-size: large;
+  align-self: flex-start;
+}
+
+
+#menu_responsive nav {
+
+  width: 100%;
+  font-weight: bold;
+  height: auto;
+
+}
+
+#menu_responsive nav ul {
+
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+}
+
+#menu_responsive nav li a{
+
+  color: #273c75; 
+  text-decoration: none;
+  display: block;
+  padding: 1em 1.5em;
+  opacity: 100%;
+}
+
+#menu_responsive nav li {
+
+  color: white; 
+  text-decoration: none;
+  display: block;
+  padding: 0;
+  opacity: 100%;
+
+}
+
+
+
+#menu_responsive .submenu li a:hover {
+  animation: fondomenuresp 300ms forwards;
+
+}
+
+#menu_responsive nav li a:hover {
+  animation: fondomenu 300ms forwards;
+
+}
+
+#menu_responsive .submenu {
+display: none;
+position: absolute;
+  background: #f8f8f8;
+  border: solid 3px #cccccc;
+  opacity: 70%;
+z-index: 1001;
+height: 88vh;
+
+}
+
+
+#menu_responsive .submenu li {
+padding: none;
+text-align: center;
+display: block;
+}
+
+
+
+#menu_responsive .itemder:hover .submenu {
+display: block;
+animation: ressubmenu 600ms forwards;
+}
+
+@keyframes ressubmenu{
+
+  0%{
+      opacity: 0%;
+      border-radius: 10%;
+      width: 0vw;
+  }
+  50%{
+      opacity: 40%;
+      width: 43vw;
+  }
+  100%{
+      opacity: 75%;
+      border-radius: 0%;
+      width: 57%;
+  }
+
+}
+/* Estilo del contenedor principal para login, admin y contenido/usuarios */
+.login-container, .admin-container {
+  max-width: 960px;
+  margin: 5% auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  border-radius: 8px;
+}
+
+#contenido-usuario{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  padding-left: 40%;
+  max-width: 100px;
+}
+
+#contenido-logo{
+  display: flex;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  padding-left: 5%;
+  align-items: center;
+}
+
+#contenido-logo h1{
+  margin-left: 5%;
+}
+
+#menu {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  display: flex;
+  padding: 10px;
+  max-width: 70vw;
+  margin: auto 15vw;
+}
+
+.modifier-container {
+  margin: 5% auto;
+  padding: 2rem;
+  max-width: 90vw;
+  background-color: #ffffff;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  border-radius: 8px;
+  min-width: 70vw;
+}
+
+/* Formularios generales */
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem;
+}
+
+input[type='text'], input[type='password'], input[type='number'], input[type='email'], input[type='date'], input[type='url'], select, option {
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 2px solid #bdc3c7;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.button, button, a.button {
+  flex: 1;
+  min-width: 150px;
+  margin: 0 10px;
+  padding: 12px 24px;
+  font-size: 16px;
+  text-align: center;
+  background-color: #273c75;
+  color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.buttonReturn {
+  flex: 1;
+  min-width: 150px;
+  margin: 0 10px;
+  padding: 12px 24px;
+  font-size: 16px;
+  text-align: center;
+  background-color: #f3f3f3;
+  color: #273c75;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover, button:hover, a.button:hover, .buttonReturn:hover {
+  background-color: #192a56;
+  color: #ffffff;
+}
+
+.buttonCrud {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+
+}
+
+.buttonCrud button, .buttonCrud a.button {
+  flex: 1;
+  min-width: 150px;
+  text-align: center;
+  margin: 0 10px;
+}
+
+.buttonCrud a:first-child, .buttonCrud button:first-child {
+  margin-left: 0;
+}
+
+.buttonCrud a:last-child, .buttonCrud button:last-child {
+  margin-right: 0;
+}
+
+#contentForm, #clientForm {
+  margin-bottom: 20px;
+}
+
+/* Estilos para la navegación de pestañas */
+.nav button {
+  padding: 10px 20px;
+  background-color: #f8f9fa;
+  color: #273c75;
+  border: 2px solid #dcdde1;
+  margin: 10px;
+  font-size: 20px;
+  width: 100%;
+}
+
+.nav button.active, .nav button:hover {
+  background-color: #273c75;
+  color: white;
+  border-color: #273c75;
+}
+
+/* Estilos de las pestañas de contenido */
+.tabcontent {
+  padding: 20px;
+  border: 2px solid #bdc3c7;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+  border-bottom: 2px solid #bdc3c7; /* Línea más visible */
+}
+
+/* Estilos carta contenido */
+
+.content-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 50px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+
+.content-block,
+.content-block-back {
+  border-radius: 10px;
+  padding: 10px;
+  background-color: white;
+  box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+}
+
+.img-container img{
+  width: 100%;
+  height: 400px;
+}
+
+.content-block p {
+  margin: 5px;
+}
+
+.card-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.name {
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.flip-card:hover .card-container {
+  transform: rotateY(180deg);
+}
+
+.content-block,
+.content-block-back {
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  overflow-x: hidden;
+}
+
+.content-block-back {
+  transform: rotateY(180deg);
+  position: absolute;
+  top: 0%;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 10%;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Estilos carta usuario */
+
+.user-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 50px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+
+.user-block,
+.user-block-back {
+  border-radius: 10px;
+  padding: 10px;
+  background-color: white;
+  box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+}
+
+.img-container-user{
+  display: flex;
+  justify-content: center;
+}
+
+.img-container-user img{
+  width: 200px;
+  height: auto;
+}
+
+.user-block p {
+  margin: 5px;
+}
+
+.user-block,
+.user-block-back {
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.user-block-back {
+  transform: rotateY(180deg);
+  position: absolute;
+  top: 0%;
+}
+
+/* Media Queries para Responsividad */
+
+
+@media (max-width: 1200px){
+  .nav button {
+    font-size: 16px;
+  }
+
+  .content-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 50px;
+    width: 80%;
+    margin:auto;
+  }
+
+  .user-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    width: 80%;
+    margin:auto;
+  }
+
+  .name {
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 1.0rem;
+  }
+
+  .img-container img{
+    width: 100%;
+    height: 300px;
+  }
+
+  .img-container-user img{
+    width: 150px;
+    height: auto;
+  }
+
+  .button, button, a.button {
+    max-width: 10px;
+    font-size: 10px;
+    margin: 0%;
+  }
+
+  #contenido-usuario{
+    display: none;
+    position: absolute;
+  }
+
+  #menu{
+    display: none;
+    position: absolute;
+  }
+
+  #menu_responsive {
+
+    position: -webkit-sticky;
+    position: sticky;
+    display: flex;
+    z-index: 1000;
+}
+
+header {
+  min-width: 100vw;
+  margin-left: 0%;
+  margin-right: 0%;
+  margin-top: 0%;
+}
+
+#contenido-logo #normal{
+ display: none;
+}
+
+#contenido-logo h1{
+  margin-right: 5%;
+  font-size: 180%;
+}
+
+#contenido-logo{
+  margin-left: 10%;
+}
+
+#responsive {
+  display: block;
+}
+
+footer {
+  min-width: 100vw;
+  margin-left: 0%;
+  margin-right: 0%;
+  margin-bottom: 0;
+}
+
+}
+@media (max-width: 768px){
+  .login-container, .admin-container {
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  .button, button, a.button {
+    max-width: 20%;
+    font-size: 10px;
+  }
+
+  .content-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    margin-top: 20px;
+  }
+
+  .user-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 50px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    margin-top: 20px;
+  }
+
+  .name {
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 0.7rem;
+  }
+
+  .img-container img{
+    width: 100%;
+    height: 200px;
+  }
+
+  .img-container-user img{
+    width: 100px;
+    height: auto;
+  }
+}

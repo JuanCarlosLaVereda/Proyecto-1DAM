@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MiraVereda Admin</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div id="menu_responsive">
+      <nav>
+          <ul>
+            <li class="itemder">
+              <a href="#">⁝</a>
+              <ul class="submenu">
+                <li><a id="cerrarSesion" onclick="cerrarSesion()">Cerrar Sesión</a></li>
+                <li><a href="formCliente.html">Volver</a></li>
+              </ul>
+            </li>
+          </ul>
+      </nav>
+    </div>
+    <div id="contenido-logo">
+      <img class="logocircular" id="normal" src="img/DALL·E 2024-05-15 17.12.06 - Design a logo featuring an antique film camera with the initials 'MV' incorporated into the camera lens. The camera should be centrally placed within .webp" width="100px" height="auto">
+      <h1>MiraVereda Admin</h1>
+      <img class="logocircular" id="responsive" src="img/DALL·E 2024-05-15 17.12.06 - Design a logo featuring an antique film camera with the initials 'MV' incorporated into the camera lens. The camera should be centrally placed within .webp" width="100px" height="auto">
+    </div>
+    <div id="contenido-usuario">
+      <img id="iconoUsuario" class="logocircular" src="https://static.vecteezy.com/system/resources/previews/019/879/186/non_2x/user-icon-on-transparent-background-free-png.png" width="120px" height="auto">
+      <a id="cerrarSesion" class="button" onclick="cerrarSesion()">Cerrar Sesión</a>
+    </div>
+  </header>
+  <nav id="menu">
+    <a href="formCliente.html" class="buttonReturn">Volver al Listado de Clientes</a>
+  </nav>
+  <div class="modifier-container">
+        <div class="img-container-user">
+            <img id="iconocliente" class="logocircular" src="https://static.vecteezy.com/system/resources/previews/019/879/186/non_2x/user-icon-on-transparent-background-free-png.png">
+        </div>
+        <form id="clientForm" onsubmit="modificarCliente(); return false;">
+            <input type="text" id="nombreUser" name="nombreUser" placeholder="Usuario" required>
+            <input type="text" id="clientName" name="clientName" placeholder="Nombre" required>
+            <input type="text" id="clientLastName" name="clientLastName" placeholder="Apellido" required>
+            <input type="text" id="clientEmail" name="clientEmail" placeholder="Email" required>
+            <input type="password" id="clientPassword" name="clientPassword" placeholder="Contraseña" required>
+            <input type="text" id="clientDomicilio" name="clientDomicilio" placeholder="Domicilio" required>
+            <input type="date" id="clientFechNac" name="clientFechNac" placeholder="FechNac" required>
+            <input type="number" id="clientNumTarjeta" name="clientNumTarjeta" placeholder="NumTarjeta" required>
+            <input type="text" id="clientIcon" name="clientIcon" placeholder="Url Icono">
+            <input type="number" id="clientCodPostal" name="clientCodPostal" placeholder="CodPostal" required>
+            <button type="submit">Actualizar Cliente</button>
+        </form>
+        <h1 id="mensaje_resultado"></h1>
+  </div>
+<footer>
+  <p>1ºDAW</p>
+  <p>1ºDAM</p>
+</footer>
+<script src="js/modifyuser.js"></script>
+</body>
+</html>
