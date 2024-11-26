@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/buttonComprar3"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/boton_custom"
+            android:drawableStart="@drawable/icono_carrito_blanco"
+            android:paddingLeft="11dp"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/textViewDuracionCapitulo"
+            app:layout_constraintTop_toBottomOf="@+id/textViewRepartoCapitulo" />
+
+        <Button
+            android:id="@+id/buttonVolver3"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/boton_custom"
+            android:drawableStart="@drawable/icono_volver_blanco"
+            android:paddingLeft="10dp"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textViewPrecioCapitulo"
+            app:layout_constraintTop_toBottomOf="@+id/textViewRepartoCapitulo" />
+
+        <ImageView
+            android:id="@+id/imagenCapitulo"
+            android:layout_width="290dp"
+            android:layout_height="438dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/ic_launcher"
+            tools:srcCompat="@mipmap/test_harry_potter" />
+
+        <TextView
+            android:id="@+id/textViewTituloCapitulo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="Harry Potter y la piedra filosofal"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imagenCapitulo" />
+
+        <TextView
+            android:id="@+id/textViewDescripcionCapitulo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="El día en que cumple once años, Harry Potter descubre que es hijo de dos conocidos hechiceros, de los que ha heredado poderes mágicos. Deberá acudir entonces a una famosa escuela de magia y hechicería: Howards."
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/textViewTituloCapitulo"
+            app:layout_constraintStart_toStartOf="@+id/textViewTituloCapitulo"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTituloCapitulo" />
+
+        <TextView
+            android:id="@+id/textViewTemporada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="2009"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintStart_toStartOf="@+id/textViewDescripcionCapitulo"
+            app:layout_constraintTop_toBottomOf="@+id/puntuacionUsuarioCapitulo" />
+
+        <TextView
+            android:id="@+id/textViewDuracionCapitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="90 min"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewTemporada"
+            app:layout_constraintEnd_toEndOf="@+id/textViewDescripcionCapitulo"
+            app:layout_constraintTop_toTopOf="@+id/textViewTemporada" />
+
+        <TextView
+            android:id="@+id/textViewPrecioCapitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="7.81€"
+            android:textColor="#f2bb30"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/textViewTemporada"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTemporada" />
+
+        <TextView
+            android:id="@+id/textViewDirectorCapitulo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Director: "
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/textViewDisponibleHastaCapitulo"
+            app:layout_constraintStart_toStartOf="@+id/textViewPrecioCapitulo"
+            app:layout_constraintTop_toBottomOf="@+id/textViewPrecioCapitulo" />
+
+        <TextView
+            android:id="@+id/textViewRepartoCapitulo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Reparto: "
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/textViewDuracionCapitulo"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/textViewDirectorCapitulo"
+            app:layout_constraintTop_toBottomOf="@+id/textViewDirectorCapitulo" />
+
+        <TextView
+            android:id="@+id/textViewDisponibleHastaCapitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="22/10/23"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewPrecioCapitulo"
+            app:layout_constraintEnd_toEndOf="@+id/textViewDuracionCapitulo"
+            app:layout_constraintTop_toTopOf="@+id/textViewPrecioCapitulo" />
+
+        <RatingBar
+            android:id="@+id/puntuacionUsuarioCapitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:progressTint="@color/lime"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="@+id/textViewDescripcionCapitulo"
+            app:layout_constraintStart_toStartOf="@+id/textViewDescripcionCapitulo"
+            app:layout_constraintTop_toBottomOf="@+id/textViewDescripcionCapitulo" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Introduce el nombre de usuario y la nueva contraseña."
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/editTextActualizarUsuario"
+        app:layout_constraintEnd_toEndOf="@+id/editTextActualizarUsuario"
+        app:layout_constraintStart_toStartOf="@+id/editTextActualizarUsuario"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <EditText
+        android:id="@+id/editTextActualizarUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@color/white"
+        android:ems="10"
+        android:hint="Usuario"
+        android:inputType="text"
+        android:textColor="@color/white"
+        android:textColorHint="#999797"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextActualizarContrasenya"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/editTextActualizarContrasenya"
+        android:layout_width="278dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@color/white"
+        android:ems="10"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:textColor="#000000"
+        android:textColorHint="#999797"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextActualizarContrasenyaConfirmacion"
+        app:layout_constraintEnd_toEndOf="@+id/editTextActualizarUsuario"
+        app:layout_constraintStart_toStartOf="@+id/editTextActualizarUsuario"
+        app:layout_constraintTop_toBottomOf="@+id/editTextActualizarUsuario" />
+
+    <EditText
+        android:id="@+id/editTextActualizarContrasenyaConfirmacion"
+        android:layout_width="278dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@color/white"
+        android:ems="10"
+        android:hint="Confirmar Contraseña"
+        android:inputType="textPassword"
+        android:textColor="#000000"
+        android:textColorHint="#999797"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonConfirmarNuevaContrasenya"
+        app:layout_constraintEnd_toEndOf="@+id/editTextActualizarContrasenya"
+        app:layout_constraintStart_toStartOf="@+id/editTextActualizarContrasenya"
+        app:layout_constraintTop_toBottomOf="@+id/editTextActualizarContrasenya" />
+
+    <Button
+        android:id="@+id/buttonConfirmarNuevaContrasenya"
+        android:layout_width="274dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/gray"
+        android:text="Reiniciar Contraseña"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/editTextActualizarContrasenyaConfirmacion"
+        app:layout_constraintStart_toStartOf="@+id/editTextActualizarContrasenyaConfirmacion"
+        app:layout_constraintTop_toBottomOf="@+id/editTextActualizarContrasenyaConfirmacion"
+        app:shapeAppearance="@style/CardView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
